@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var name = 'ravi';
+		console.log(name);
+		// if(''){
+		// 	console.log('go to movie')
+		// }else{
+		// 	console.log('read a book');
+		// }
+		var num = 10;
+		while(num){
+			num = num -1 ;
+			console.log('test content');
+		}
+		var mainItem = ['biryani','rice','pulka','naan'];
+		var curryItem = ['mushroom','chicken','panner','kajumasala']
+		function goToParadise(main,curry){
+			for(var i = 0 ; i < mainItem.length; i = i + 1 ){
+				if(main === mainItem[i]){
+					console.log(main + curry + ' is on its way');
+				}
+				else{
+					console.log(main + " is not available" );
+				}		
+			}
+		}
+		goToParadise('pulka','panner');
+	</script>
+</body>
+</html>

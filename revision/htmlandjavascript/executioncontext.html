@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript" src="basics.js"></script>
+	<script type="text/javascript">
+		console.log(b)
+		var a = 10 ;
+		var b = a ;
+		console.log(b);
+		c();
+		function c(){
+			var b = 30;
+			window.console.log(b)
+		}
+		function d(){
+			c();
+			console.log(b);
+			return 10;
+		}
+		function e(){
+			console.log(b);
+			d();
+		}
+		e();
+
+
+		// table = {
+		// 	color:'white',
+		// 	shape: 'rectangle',
+		// 	support: function(){
+		// 		console.log('can pick up the weight');
+		// 	}
+		// }
+
+	</script>
+</body>
+</html>
