@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Welcome to javascript classes</h1>
+	<script type="text/javascript">
+		var name = 'ravi';
+
+		console.log(name);
+		name = 'pavan';
+		var a = 10 ;
+		var b = 20 ;
+		
+		// if(''){
+		// 	console.log('Go to movie ');
+		// }else{
+		// 	console.log('watch tv');
+		// }
+		var mainCourse = ['biryani','pulka','naan','roti','jeerarice'];
+		var curryItem = ['paneer','buttermasala','dal','mixedveg']
+
+		function goToParadise(main,curry){
+			for( var i = 0 ; i < mainCourse.length ; i = i + 1 ){
+				if(mainCourse[i] === main){
+					console.log(main + ' item is available');
+				}
+			}
+			// console.log(main +' ' + curry +  ' is on its way ');
+		}
+
+		goToParadise('roti','mixedveg');
+
+		// assignment
+		// print in console area - if main item and curry are available then print statement "mainItem  +  curry  +  'are available'"
+		// print in console area - if main item is available and curry item is not there then print statement  "main item is available" and 
+		// curry item is not available 
+		// vice versa
+
+
+	</script>
+</body>
+</html>

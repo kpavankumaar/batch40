@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	console.log(b);
+	var a = 10 ;
+	var b = a ; 
+	console.log(b);
+	function c(){
+		var b =30;
+		console.log(b);
+	}
+
+	function d(){
+		b = 20;
+		console.log(b);
+		c();
+	}
+	function e(){
+		d()
+		console.log(b);
+	}
+
+	e();
+</script>
+</body>
+</html>

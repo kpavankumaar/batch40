@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function d(){
+			console.log('print me after 3 sec')
+			return 10;
+		}
+		// setTimeout(d,3000);
+		var a = d();
+		var setInter = setInterval(d,3000);
+		function clearInter(){
+			clearInterval(setInter);	
+		}
+		
+	</script>
+</body>
+</html>
