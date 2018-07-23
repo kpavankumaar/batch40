@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// operators , Arrays , Object creation 
+		function run (){
+			
+			return 10;
+			console.log('test');
+		}
+
+		var returnval = run();
+		var name = 'ravi' ;
+		name1 = name;
+		name1 = 'srikanth';
+
+
+		var nissanCar = {
+			'color': 'blue',
+			'type': 'sedan',
+			'model': 2018,
+			'brand name': 'Nisan',
+			drive: function(){console.log('drive the car')},
+			usage: function(){console.log('for' + ' office' )}
+
+		}
+		var newCar1 = Object.create(nissanCar);
+		var newCar2 = Object.create(nissanCar);
+
+		newCar2.usage = function (){
+			console.log('for' +  ' college ');
+		}
+
+	</script>
+</body>	
+</html>
