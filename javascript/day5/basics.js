@@ -23,4 +23,11 @@ function TeslaCarModel(model , brand, carcolor,type ) {
 	this.carcolor = carcolor;
 	this.type = type;
 }
+
+function Accessories (airbags,musicsystem,camera,tyre){
+	this.airbags = airbags;
+	this.musicsystem = musicsystem;
+	this.camera = camera ;
+	this.tyre = tyre;
+}
 // teslaCarModel();
