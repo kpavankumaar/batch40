@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>basics of array </title>
+</head>
+<body>
+	<script type="text/javascript">
+		var newArray = [1,2,3];
+		newArray.push(['b']);
+		newArray.unshift(0);
+		var num = newArray.shift();
+		var example1 = [1,2,3]
+		var example2 = example1.concat([4,5]);
+		
+		var exmp3 = [1,2,3,4,5,6];
+		console.log(exmp3.slice(1,4));
+		var exmp4 = [1,2,3,4,5,6];
+		console.log(exmp4.splice(2,0,10));
+		var exmp5 = [3,8,1,4,10,6,8,2,9,5,7];
+		exmp5.sort(function(initialval,finalval){	
+			return initialval - finalval;
+		})
+		
+	</script>
+</body>
+</html>

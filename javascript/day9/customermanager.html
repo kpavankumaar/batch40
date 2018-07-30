@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer manager </title>
+	<style type="text/css">
+		html,body,ul,li,h3{
+			padding:0px;
+			margin:0px;
+		}
+		ul li{
+			float:left;
+			list-style-type: none;
+			width:200px;
+			border:1px solid black;
+			text-align:center;
+		}
+		div.main{
+			width:450px;
+			margin:auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div>
+			<ul>
+				<li><strong>Product</strong></li>
+				<li><strong>Item Cost</strong></li>
+			</ul>
+		</div>
+		<div class="cust" id="firstcust">
+			<h3>Customer name </h3>
+			<ul>
+				<li>Product 1 </li>
+				<li>Item cost</li>
+			</ul>
+			<ul>
+				<li>Product 2 </li>
+				<li>Item cost</li>
+			</ul>
+			<ul>
+				<li>Product 3 </li>
+				<li>Item cost</li>
+			</ul>
+			<ul>
+				<li>Total cost</li>
+				<li>sum of item cost</li>
+			</ul>
+		</div>
+		<div class="cust" id="secondcust">
+			<h3>Customer name </h3>
+			<ul>
+				<li>Product 1 </li>
+				<li>Item cost</li>
+			</ul>
+			<ul>
+				<li>Product 2 </li>
+				<li>Item cost</li>
+			</ul>
+			<ul>
+				<li>Product 3 </li>
+				<li>Item cost</li>
+			</ul>
+			<ul>
+				<li>Total cost</li>
+				<li>sum of item cost</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var mainEl = document.getElementsByClassName('main')[0];
+		var firstCust = document.getElementById('firstcust');
+		// mainEl.onclick = function(){
+		// 	console.log('you clicked main element');
+
+		// }
+		mainEl.addEventListener('click',function(event){
+			console.log(event);
+			console.log('you clicked main element');			
+		},true)
+		firstCust.addEventListener('click',function(){
+			console.log('you clicked firstcust element');			
+		},true);
+
+
+
+	</script>
+</body>
+</html>

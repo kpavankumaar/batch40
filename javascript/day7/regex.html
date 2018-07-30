@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		//"{'model':'2013','brand':'tesla','color':'red','type':'sedan'}"
+		var str = "?model=2013&brand=tesla&color=red&type=sedan+"
+		var data = str.replace(/\?/,'{').replace(/\+/,'').replace(/$/,'}').replace(/=/g,':').replace(/&/g,',').replace(/\b/g,'"');
+	</script>
+</body>
+</html>
