@@ -67,7 +67,9 @@
 			</ul>
 		</div>
 	</div>
+	<script type="text/javascript" src="data.js"></script>
 	<script type="text/javascript">
+		console.log(data);
 		var mainEl = document.getElementsByClassName('main')[0];
 		var firstCust = document.getElementById('firstcust');
 		// mainEl.onclick = function(){
@@ -84,8 +86,29 @@
 
 
 		function createCustomerObject (){
-				
+			var custDiv = document.createElement('div');
+			var heading = document.createElement('h3');
+			var row = document.createElement('ul');
+			var productNameColumn = document.createElement('li');
+			var itemCostColumn = document.createElement('li');
+
+			productNameColumn.innerText = 'Product Name';
+			itemCostColumn.innerText = 5;
+
+			row.appendChild(productNameColumn);
+			row.appendChild(itemCostColumn);
+			
+			heading.innerText = 'Ravi';
+			custDiv.setAttribute('class','cust');
+			custDiv.appendChild(heading);
+			custDiv.appendChild(row);
+			custDiv.style.clear = 'both';
+			mainEl.appendChild(custDiv);
+
+
 		}
+		window.onload = createCustomerObject;
+
 	</script>
 </body>
 </html>
