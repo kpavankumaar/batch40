@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var read ;
+		setTimeout(function(){
+		  read = 'test';
+
+		},10000)
+
+
+
+		var read1;
+		var read2
+		var promiseObj = new Promise(cb);
+		function cb(resolve , reject){
+
+			setTimeout(function () {
+				read1 = 'test1';
+				resolve(read1);
+				setTimeout(function(){
+					read2 = 'test2';
+					resolve(read2);
+				},5000)
+			}, 10000)
+		}
+		console.log(read1);
+		promiseObj.then(function(read1value){
+			console.log(read1value);
+		})
+
+	</script>
+</body>
+</html>

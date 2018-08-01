@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promise</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var newPromiseObect = new Promise(cb);
+		function cb (resolve , reject){
+			var xhr = new XMLHttpRequest();
+			var url = 'https://jsonplaceholder.typicode.com/postss';
+			xhr.open('GET',url,true);
+			xhr.onreadystatechange = function(){
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					resolve(xhr.response);
+				}else{
+					console.log(xhr.readyState);
+					reject(xhr.status);
+				}
+			}
+			xhr.send();
+	
+		}
+		// function cb(function(res){res},function(){})
+		newPromiseObect.then(function(res){
+			console.log(res);
+		})
+		newPromiseObect.catch(function(err){
+			console.log(err);
+		})
+	</script>
+</body>
+</html>
