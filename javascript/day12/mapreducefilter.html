@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>	
+
+	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript">
+		console.log(data);
+		var newArr = data.map(function(obj){
+			obj.firstName;
+			var itemCostArr = obj.orders.map(function(ordersObj){
+				return ordersObj.itemCost;
+			})
+			console.log(itemCostArr);
+			var totalPurchaseCost = itemCostArr.reduce(function(acc, currvalue){
+				return acc = acc + currvalue;
+			})
+			console.log(totalPurchaseCost);
+		})
+
+
+		// var num = [1,2,3,4]
+		// var modifiedNum = num.map(function(a){
+		// 	console.log(a * 2);
+		// })
+		// var filteredNum = num.filter(function(a){
+		// 	if(a === 2){
+		// 		return a;
+		// 	}
+		// })
+		// var obj  = {};
+		// var reducedNum = num.reduce(function(accumlator, currentvalue, currentIndex , arr){
+		// 	console.log("accumlator "+ accumlator);	
+		// 	console.log("currentvalue " +  currentvalue)
+		// 	console.log("currentIndex" + currentIndex);
+		// 	console.log("arr" + arr);
+		// 	// accumlator = accumlator + currentvalue;
+		// 	// return accumlator;
+		// 	accumlator['sum'].push(0);
+		// 	accumlator['total'] = accumlator['sum'] + currentvalue;
+		// },[])
+
+	</script>
+</body>	
+</html>
+
+
+
+
+
+
+
+
+

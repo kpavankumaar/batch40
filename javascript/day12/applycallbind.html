@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var obj = {
+			num1: 10,
+			num2: 20
+		}
+		function calculate(a,b){
+			console.log(a*b)
+			this.mul = a*b;
+			this.mul1 = this.num1 + this.num2;
+		}
+		var arr = [9,5];
+		calculate.call(obj,2,5);
+		calculate.apply(obj,arr);
+		var multiplesOf2 = calculate.bind(obj,2)
+		var multiplesOf3 = calculate.bind(obj,3)
+	</script>
+</body>
+</html>
