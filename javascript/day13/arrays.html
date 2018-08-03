@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html,body,ul,li,h3{
+			padding:0px;
+			margin:0px;
+		}
+		ul li{
+			float:left;
+			list-style-type: none;
+			width:200px;
+			border:1px solid black;
+			text-align:center;
+		}
+		div.main{
+			width:450px;
+			margin:auto;
+		}
+	</style>
+</head>
+<body>
+<div class="main">
+		<div>
+			<ul>
+				<li><strong>Product</strong></li>
+				<li><strong>Item Cost</strong></li>
+			</ul>
+		</div>
+		<div class="cust" id="firstcust">
+			<h3 id="custName"></h3>
+			<ul>
+				<li class="productName1"></li>
+				<li class="itemCost1"></li>
+			</ul>
+			<ul>
+				<li class="productName1"></li>
+				<li class="itemCost1"></li>
+			</ul>
+			<ul>
+				<li>Total cost</li>
+				<li id="totalCost1"></li>
+			</ul>
+		</div>
+		
+	</div>	
+
+	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript">
+		console.log(data);
+		var newArr = data.map(function(obj){
+			console.log(obj.firstName + ' ' + obj.lastName);
+			// document.getElementById('custName').innerHTML = obj.firstName;
+			var orders1 = obj.orders.map(function(ordersObj){
+				console.log(ordersObj.productName + ' ' + ":" + " " + ordersObj.itemCost);
+				// document.getElementByClass('productName1').innerHTML = ordersObj.productName;
+				// document.getElementByClass('itemCost1').innerHTML = ordersObj.itemCost;
+				return ordersObj.itemCost;
+			
+			})
+			var totalPurchaseCost = orders1.reduce(function(acc, currvalue){
+				return acc = acc + currvalue;
+			})
+			// document.getElementById('totalCost1').innerHTML = totalPurchaseCost;
+			console.log("Total cost" + " " + ":" + " " + totalPurchaseCost);
+			
+		})
+
+
+
+
+	</script>
+
+</body>	
+</html>

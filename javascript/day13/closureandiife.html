@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>iife and closures</title>
+</head>
+<body>
+	<script type="text/javascript">
+		(function(obj){
+					var a = obj ;	
+					console.log(a);
+				})(window)
+		
+		for(i=0; i< 10; i = i+1 ){
+			console.log(i);
+			setTimeout(function(){
+				console.log(i);
+			},2000)
+		}
+		function personalInfo(language){
+			return function(name){
+				console.log(name + ' knows ' + language);
+			}
+		}
+		var person1 = personalInfo('english')('ravi');
+
+	</script>
+	<script type="text/javascript" src="new.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
