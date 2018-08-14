@@ -17,10 +17,11 @@ var Engine = /** @class */ (function () {
     }
     Engine.prototype.start = function () {
         console.log(' engine is going to start ');
-        return 10;
+        // return 10;
     };
     Engine.prototype.stop = function () {
-        return 20;
+        console.log('engine is stopped');
+        // return 20;
     };
     return Engine;
 }());
@@ -29,7 +30,11 @@ var Car = /** @class */ (function (_super) {
     function Car() {
         return _super.call(this, 'petrol engine') || this;
     }
+    Car.prototype.start = function () {
+        console.log('start the engine ');
+    };
     return Car;
 }(Engine));
 var audi = new Car();
-console.log(audi);
+audi.stop();
+audi.start();

@@ -6,12 +6,13 @@ class Engine implements EngineDef {
     constructor(public engineType) {
         
     }
-    public start(){
+    start(){
         console.log(' engine is going to start ');
-        return 10;
+        // return 10;
     }
-    public stop(){
-        return 20;
+    stop(){
+        console.log('engine is stopped');
+        // return 20;
     }
 }
 class Car extends Engine {
@@ -19,8 +20,10 @@ class Car extends Engine {
         super('petrol engine');
     }
     start(){
+        console.log('start the engine ');
         
     }
 }   
 var audi = new Car();
-console.log(audi)
+audi.stop();
+audi.start();
