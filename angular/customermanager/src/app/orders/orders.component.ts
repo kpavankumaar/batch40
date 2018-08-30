@@ -7,13 +7,13 @@ import { Data } from '.././core/service';
 
 export class OrdersComponent  implements OnInit, OnDestroy, OnChanges, AfterContentChecked {
     customers;
-    totalItemCost: number;
+    customersObj;
     @Input() datashare;
+    
     constructor(private dataInfo: Data) {
         console.log(dataInfo.dataOfCustomers);
     }
     ngOnInit() {
-
         this.customers = this.dataInfo.dataOfCustomers;
         console.log(this.customers);
     }
@@ -31,18 +31,31 @@ export class OrdersComponent  implements OnInit, OnDestroy, OnChanges, AfterCont
     }
     ngAfterContentChecked() {
         console.log(this.customers);
-        this.customers.map(function(obj) {
-            
-            obj.map(function(orders) {
-                let collectionOfItemCost: any[] = [] ;
-                collectionOfItemCost.push(orders.forEach(orderObj => {
-                   return orderObj.itemCost;
-                }));
-                this.totalItemCost = collectionOfItemCost.reduce(function(acc, currentVal) {
-                    return acc = acc + currentVal;
-                });
+
+
+        this.customersObj = this.customers.map(function(obj) {
+            console.log(obj.orders);
+            let itemCostArray = [];
+            obj.orders.map(function(product) {
+                itemCostArray.push(function() {
+                    for (const key1 in product) {
+                    if (product.hasOwnProperty(key1)) {
+
+                        if (key1 === 'itemCost') {
+                            const element = product[key1];
+                            return element;
+                        }
+                    }
+                }}());
             });
+            const reducedItemCost = itemCostArray.reduce(function (acc, currentvalue) {
+                return acc = acc + currentvalue;
+            });
+            // CREATING a new totalItemcost property into the object
+            obj.totalItemCost = reducedItemCost;
+            return obj;
         });
+        console.log(this.customersObj);
     }
     ngOnDestroy() {
         console.log('ngondestroy');

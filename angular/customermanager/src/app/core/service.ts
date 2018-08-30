@@ -1,4 +1,5 @@
 import { sendData } from './data';
+import { Injector } from '@angular/core';
 
 export class Data {
     dataOfCustomers;

@@ -1,4 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<!-- The content below is only a placeholder and can be replaced.
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
@@ -30,5 +30,23 @@
 <p [style.background-color]='color'>{{content}}</p>
 <p>{{name}}</p>
 <button (click)='toggleColor()'> toggle color </button>
-<button (click)='toggleChildComponent()'> Show / Hide </button>
-<app-orders [datashare] = 'name' *ngIf = 'hideaddress'></app-orders>
+<button (click)='toggleChildComponent()'> Show / Hide </button> -->
+<!-- <app-orders [datashare] = 'name' *ngIf = 'hideaddress'></app-orders> -->
+<div class="container-fluid">
+  <ul class="nav bg-primary">
+    <li class="nav-item">
+      <a class="nav-link active text-light" href="#">Customers</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-light" href="#">Orders</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-light" href="#">Login</a>
+    </li>
+  </ul>
+
+</div>
+<!-- <app-customers></app-customers> -->
+
+<!-- <app-orders [datashare] = 'name'></app-orders> -->
+<router-outlet></router-outlet>

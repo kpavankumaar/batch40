@@ -1,5 +1,5 @@
 
-<div class="container" *ngFor = 'let cust of customers'>
+<div class="container" *ngFor = 'let cust of customersObj'>
     <h3>Customer name : {{cust.firstName}}</h3>
 
     <table class="table table-striped table-dark">
@@ -17,10 +17,10 @@
                 <td>{{order.productName}}</td>
                 <td>{{order.itemCost}}</td>
             </tr>
-            <tr>
+            <tr >
                 <th></th>
                 <td>Total cost</td>
-                <td>{{this.totalItemCost}}</td>
+                <td>{{cust.totalItemCost}}</td>
             </tr>
         </tbody>
     </table>
