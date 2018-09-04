@@ -5,7 +5,7 @@ import { DataService } from '../core/data.service';
     selector: 'app-customer',
     templateUrl: 'customer.component.html'
 })
-export class CustomerComponent implements OnInit{
+export class CustomerComponent implements OnInit {
     details;
     customerDetails;
     constructor(public route: ActivatedRoute, public dataService: DataService) {

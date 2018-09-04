@@ -13,7 +13,7 @@ import { DataService } from './core/data.service';
 
 @NgModule({
   declarations: [
-    AppComponent, OrdersComponent, CustomersComponent, CustomerComponent
+    AppComponent, OrdersComponent, CustomerComponent
   ],
   imports: [
     BrowserModule, FormsModule, RouterModule.forRoot(routes)

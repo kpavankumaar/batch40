@@ -7,7 +7,7 @@ import { DataService } from '../core/data.service';
     templateUrl: 'customers.component.html',
     styleUrls: [ 'style.css']
 })
-export class CustomersComponent implements OnInit{
+export class CustomersComponent implements OnInit {
     private customers;
     customersData;
     isValue = false;
@@ -25,6 +25,7 @@ export class CustomersComponent implements OnInit{
 
     }
     ngOnInit() {
+        console.log('lifecycle hook inside customers component.ts');
         this.customers = new Data();
         this.customersData = this.customers.dataOfCustomers;
     }
